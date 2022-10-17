@@ -1,51 +1,40 @@
 MAIN_PRODUCTS = document.getElementById('products');
 
 class Products {
-  constructor() {
-    this.classNameActive = 'products-element__btn_active';
-    this.labelAdd = 'Добавить в корзину';
-    this.labelRemove = 'Удалить из корзины';
-  }
-
   handleAddSessionStorage(id) {
-    // debugger;
     sessionStorageUtil.putProducts(id);
-
-    // if (pushProduct) {
-    //   element.classList.add(this.classNameActive);
-    //   element.innerHTML = this.labelRemove;
-    // } else {
-    //   element.classList.remove(this.classNameActive);
-    //   element.innerHTML = this.labelAdd;
-    // }
-
     basket.render(sessionStorageUtil.productsCount);
+    this.render();
   }
   handleRemoveSessionStorage(id) {
     sessionStorageUtil.removeProduct(id);
     basket.render(sessionStorageUtil.productsCount);
+    this.render();
   }
   handleAllRemoveSessionStorage(id) {
     sessionStorageUtil.removeAllProducts(id);
     basket.render(sessionStorageUtil.productsCount);
-    this.render();
+    this.render(id);
   }
   render() {
+    // debugger;
     const productsStore = sessionStorageUtil.getProducts();
     let htmlCatalog = '';
     let totalPrice = 0;
-    debugger;
+
     PRODUCTS.forEach(({ id, img, title, price }) => {
-      // let countProductsId = productsStore.filter((item) => item.id === id).length;
-      // onclick="productsPage.handleAddSessionStorage("${id}");"
       const index = productsStore.findIndex((item) => item.id === id);
+
       if (index !== -1) {
-        totalPrice += price * productsStore[index].countProductsId;
+        const productTotalPrice = price * productsStore[index].countProductsId;
+        totalPrice += productTotalPrice;
         htmlCatalog += `
           <div class="container basket__item">
           <button 
             class="basket__delete"
-            onclick="productsPage.handleAllRemoveSessionStorage('el1');"
+            type="button"
+            title="delete"
+            onclick="productsPage.handleAllRemoveSessionStorage('${id}');"
           >
             <img src="/images/Delete.svg" alt="" />
           </button>
@@ -57,6 +46,8 @@ class Products {
             <div class="counter container space-between">
               <button 
                 class="counter_button container"
+                type="button"
+                title="minus"
                 data-direction="minus"
                 onclick="productsPage.handleRemoveSessionStorage('${id}');"
               >
@@ -65,13 +56,15 @@ class Products {
               <input
                 class="counter__value"
                 type="text"
+                aria-label="count"
                 name="productCount"
                 value="${productsStore[index].countProductsId}"
                 disabled
               />
               <button 
-                id="${id}"
                 class="counter_button container" 
+                type="button"
+                title="plus"
                 data-direction="plus" 
                 onclick="productsPage.handleAddSessionStorage('${id}');"
               >
@@ -81,37 +74,11 @@ class Products {
             </div>
             <p class="item__name">${title}</p>
             <p class="item__price">${price.toLocaleString()} ₽</p>
-            <p class="item__price__all">${(
-              price * productsStore[index].countProductsId
-            ).toLocaleString()} ₽</p>
+            <p class="item__price__all">${productTotalPrice.toLocaleString()} ₽</p>
           </div>
         `;
       }
     });
-    // CATALOG.forEach(({ id, name, price, img }) => {
-    //   let activeClass = '';
-    //   let activeText = '';
-
-    //   if (productsStore.indexOf(id) === -1) {
-    //     activeText = this.labelAdd;
-    //   } else {
-    //     activeClass = ' ' + this.classNameActive;
-    //     activeText = this.labelRemove;
-    //   }
-
-    //   htmlCatalog += `
-    //             <li class="products-element">
-    //                 <span class="products-element__name">${name}</span>
-    //                 <img class="products-element__img" src="${img}" />
-    //                 <span class="products-element__price">
-    //                     ⚡️ ${price.toLocaleString()} USD
-    //                 </span>
-    //                 <button class="products-element__btn${activeClass}" onclick="productsPage.handleSetLocationStorage(this, '${id}');">
-    //                     ${activeText}
-    //                 </button>
-    //             </li>
-    //         `;
-    // });
 
     const html = `
       <div class="container collumn main__basket-items">

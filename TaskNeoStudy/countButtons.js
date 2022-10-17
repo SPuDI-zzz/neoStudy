@@ -10,7 +10,6 @@ const counter = function () {
 
       if (direction === 'plus') {
         newValue = currentValue + 1 > 10 ? 10 : currentValue + 1;
-        // productsPage.handleSetSessionStorage(id);
       } else {
         newValue = currentValue - 1 > 1 ? currentValue - 1 : 1;
       }

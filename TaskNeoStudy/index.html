@@ -12,13 +12,13 @@
       <header>
         <!-- <nav> -->
         <div class="header container space-between">
-          <a href="/index.html">
+          <a href="index.html">
             <span class="qpick">QPICK</span>
           </a>
           <div class="container basket-heart space-between">
             <div class="heart">
               <div class="circle">2</div>
-              <img src="/images/Heart.svg" alt="Heart" />
+              <img src="images/Heart.svg" alt="Heart" />
             </div>
             <a href="/pages/basket.html">
               <div id="basket" class="basket">
@@ -46,7 +46,9 @@
                   <p class="product-name">Apple BYZ S852I</p>
                   <button
                     class="card_button buy"
-                    onclick="productsPage.handleAddSessionStorage('el1');"
+                    type="button"     
+                    title="buy"              
+                    onclick="basket.handleAddSessionStorage('el1');"
                   >
                     Купить
                   </button>
@@ -64,7 +66,9 @@
                   <p class="product-name">Apple EarPods</p>
                   <button
                     class="card_button buy"
-                    onclick="productsPage.handleAddSessionStorage('el2');"
+                    type="button" 
+                    title="buy"
+                    onclick="basket.handleAddSessionStorage('el2');"
                   >
                     Купить
                   </button>
@@ -81,7 +85,9 @@
                   <p class="product-name">Apple EarPods</p>
                   <button
                     class="card_button buy"
-                    onclick="productsPage.handleAddSessionStorage('el3');"
+                    type="button" 
+                    title="buy"
+                    onclick="basket.handleAddSessionStorage('el3');"
                   >
                     Купить
                   </button>
@@ -98,7 +104,9 @@
                   <p class="product-name">Apple BYZ S852I</p>
                   <button
                     class="card_button buy"
-                    onclick="productsPage.handleAddSessionStorage('el1');"
+                    type="button" 
+                    title="buy"
+                    onclick="basket.handleAddSessionStorage('el1');"
                   >
                     Купить
                   </button>
@@ -115,7 +123,9 @@
                   <p class="product-name">Apple EarPods</p>
                   <button
                     class="card_button buy"
-                    onclick="productsPage.handleAddSessionStorage('el2');"
+                    type="button" 
+                    title="buy"
+                    onclick="basket.handleAddSessionStorage('el2');"
                   >
                     Купить
                   </button>
@@ -132,7 +142,9 @@
                   <p class="product-name">Apple EarPods</p>
                   <button
                     class="card_button buy"
-                    onclick="productsPage.handleAddSessionStorage('el3');"
+                    type="button" 
+                    title="buy"
+                    onclick="basket.handleAddSessionStorage('el3');"
                   >
                     Купить
                   </button>
@@ -160,7 +172,9 @@
                   <p class="product-name">Apple AirPods</p>
                   <button
                     class="card_button buy"
-                    onclick="productsPage.handleAddSessionStorage('el4');"
+                    type="button" 
+                    title="buy"
+                    onclick="basket.handleAddSessionStorage('el4');"
                   >
                     Купить
                   </button>
@@ -177,7 +191,9 @@
                   <p class="product-name">GERLAX GH-04</p>
                   <button
                     class="card_button buy"
-                    onclick="productsPage.handleAddSessionStorage('el5');"
+                    type="button"
+                    title="buy" 
+                    onclick="basket.handleAddSessionStorage('el5');"
                   >
                     Купить
                   </button>
@@ -194,7 +210,9 @@
                   <p class="product-name">BOROFONE BO4</p>
                   <button
                     class="card_button buy"
-                    onclick="productsPage.handleAddSessionStorage('el6');"
+                    type="button" 
+                    title="buy"
+                    onclick="basket.handleAddSessionStorage('el6');"
                   >
                     Купить
                   </button>
@@ -234,6 +252,6 @@
     </div>
     <script src="/utils/sessionStorageUtil.js"></script>
     <script src="/basket.js"></script>
-    <script src="/products.js"></script>
+    <!-- <script src="/products.js"></script> -->
   </body>
 </html>

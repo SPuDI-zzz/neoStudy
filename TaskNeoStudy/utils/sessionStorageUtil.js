@@ -50,14 +50,14 @@ class SessionStorageUtil {
   }
 
   removeProduct(id) {
-    debugger;
+    // debugger;
     let products = this.getProducts();
     const index = products.findIndex((item) => item.id === id);
     if (index === -1) {
       return;
     }
     if (products[index].countProductsId === 1) {
-      productsPage.handleAllRemoveSessionStorage(id);
+      this.removeAllProducts(id);
       return;
     }
     if (products[index].countProductsId > 1) {
@@ -76,7 +76,7 @@ class SessionStorageUtil {
       return;
     }
     this.productsCount -= products[index].countProductsId;
-    products.splice(index);
+    products.splice(index, 1);
 
     sessionStorage.setItem(this.keyName, JSON.stringify(products));
   }

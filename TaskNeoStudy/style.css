@@ -144,7 +144,6 @@ main {
   max-width: 311.22px;
   height: 19px;
   margin: 21px 16px 15px 21px;
-  /* padding: 21px 16px 15px 21px; */
 }
 .total p {
   font-weight: 600;
@@ -156,12 +155,8 @@ main {
 .total_button {
   justify-content: center;
   align-items: center;
-  /* vertical-align: middle; */
   max-width: 348.98px;
   height: 65px;
-  /* transform: translateY(6px); */
-  /* margin-top: 60px; */
-  /* padding-bottom: 90px; */
   background: #101010;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
@@ -170,9 +165,6 @@ main {
   font-weight: 600;
   font-size: 17px;
   line-height: 21px;
-  /* identical to box height */
-
-  /* text-align: center; */
   color: #ffffff;
 }
 .main__basket {
@@ -185,7 +177,6 @@ main {
   max-width: 633px;
   gap: 30px;
   flex-grow: 1; /*это делает объект полного размера при max-width */
-  /* height: 1000px; */
 }
 .main__total-price {
   margin-top: 7px;
@@ -219,8 +210,6 @@ main {
   font-weight: 600;
   font-size: 17px;
   line-height: 21px;
-  /* identical to box height */
-
   color: #ffa542;
 }
 .old-price {
@@ -230,8 +219,6 @@ main {
   font-weight: 600;
   font-size: 13px;
   line-height: 16px;
-  /* identical to box height */
-
   text-decoration-line: line-through;
 
   color: #ffce7f;
@@ -243,8 +230,6 @@ main {
   font-weight: 600;
   font-size: 17px;
   line-height: 21px;
-  /* identical to box height */
-
   color: #000000;
 }
 .card_button {
@@ -257,8 +242,6 @@ main {
   font-weight: 600;
   font-size: 17px;
   line-height: 21px;
-  /* identical to box height */
-
   color: #838383;
 }
 .product-name {
@@ -283,8 +266,6 @@ main {
   font-weight: 500;
   font-size: 17px;
   line-height: 21px;
-  /* identical to box height */
-
   color: #1c1c27;
 }
 .item__price {
@@ -319,16 +300,12 @@ main {
   font-weight: 600;
   font-size: 17px;
   line-height: 21px;
-  /* identical to box height */
-
   color: #000000;
 }
 .oval {
-  /* line-height: 0; */
   justify-content: center;
   align-items: center;
   position: relative;
-  /* text-align: center; */
   width: 35.17px;
   height: 30px;
   border-radius: calc(35.17px / 2) / calc(30px / 2);
@@ -341,7 +318,6 @@ main {
   justify-content: center;
   align-items: center;
   position: relative;
-  /* text-align: center; */
   width: 35.17px;
   height: 30px;
   border-radius: calc(35.17px / 2) / calc(30px / 2);
@@ -352,45 +328,21 @@ main {
   cursor: pointer;
 }
 .minus {
-  /* position: absolute; */
   height: 2px;
   width: 16.41111183166504px;
-  /* left: 50%;
-  right: 50%;
-  top: 50%; */
-  /* bottom: 65.22%; */
-  /* display: inline-block; */
-  /* line-height: 0; */
   background: #ffffff;
-  /* display: inherit; */
-  /* text-align: center; */
-  /* margin: 50% auto; */
-  /* position: absolute; */
-  /* top: 50%; */
-  /* left: 50%; */
 }
 
 .plus1 {
   background: #ffffff;
-  /* height: 100px;
-  width: 20px; */
   height: 2px;
   width: 16.41111183166504px;
-  /* position: relative; */
-  /* left: 40px; */
 }
 .plus2 {
-  /* content: ''; */
-  /* height: 20px;
-  width: 100px; */
   width: 2px;
   height: 14px;
   background: #ffffff;
-  /* z-index: 2; */
   position: absolute;
-  /* top: -2px; */
-  /* left: -40px; */
-  /* top: 40px; */
 }
 
 .basket__image-1 {
@@ -405,7 +357,6 @@ main {
   width: 219.61px;
   height: 237.07px;
   margin: 15px auto 54px;
-  /* align-self: center; */
 }
 .image-3 {
   width: 219px;
@@ -432,10 +383,8 @@ main {
   gap: 30px;
 }
 .footer {
-  /* flex: 0 0 auto; */
   margin: 0 auto;
   padding: 29px;
-
   max-width: 1110px;
   height: 149px;
   background: #ffffff;
