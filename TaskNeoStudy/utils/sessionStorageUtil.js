@@ -17,13 +17,9 @@ class SessionStorageUtil {
 
   putProducts(id) {
     let products = this.getProducts();
-    // let pushProduct = false;
-    // const index = products.indexOf(id);
-    // debugger;
-    // let countProductsId = products.filter((item) => item.id === id).length;
     const index = products.findIndex((item) => item.id === id);
+
     if (index === -1) {
-      // products.push({ id, countProductsId });
       products.push({ id, countProductsId: 1 });
       ++this.productsCount;
     } else {
@@ -31,35 +27,24 @@ class SessionStorageUtil {
         ++products[index].countProductsId;
         ++this.productsCount;
       }
-      // products[index].countProductsId =
-      //   products[index].countProductsId > 9 ? 10 : ++products[index].countProductsId;
-      // ++this.productsCount;
     }
-    // if (index === -1) {
-
-    // pushProduct = true;
-    // } else {
-
-    // products.splice(index, 1);
-    // }
 
     sessionStorage.setItem(this.keyName, JSON.stringify(products));
-
-    // return products;
-    // return { pushProduct, products };
   }
 
   removeProduct(id) {
-    // debugger;
     let products = this.getProducts();
     const index = products.findIndex((item) => item.id === id);
+
     if (index === -1) {
       return;
     }
+
     if (products[index].countProductsId === 1) {
       this.removeAllProducts(id);
       return;
     }
+
     if (products[index].countProductsId > 1) {
       --products[index].countProductsId;
       --this.productsCount;
@@ -75,11 +60,12 @@ class SessionStorageUtil {
     if (index === -1) {
       return;
     }
+
     this.productsCount -= products[index].countProductsId;
     products.splice(index, 1);
 
     sessionStorage.setItem(this.keyName, JSON.stringify(products));
   }
 }
-// debugger;
+
 const sessionStorageUtil = new SessionStorageUtil();

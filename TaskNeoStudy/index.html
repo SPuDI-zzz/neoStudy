@@ -2,256 +2,328 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="components/header/header.css" />
+    <link rel="stylesheet" href="components/main/main.css" />
+    <link rel="stylesheet" href="components/footer/footer.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>TaskNeoStudy</title>
   </head>
-  <body>
-    <div class="main-container container collumn">
-      <header>
-        <!-- <nav> -->
-        <div class="header container space-between">
-          <a href="index.html">
-            <span class="qpick">QPICK</span>
-          </a>
-          <div class="container basket-heart space-between">
-            <div class="heart">
-              <div class="circle">2</div>
-              <img src="images/Heart.svg" alt="Heart" />
-            </div>
-            <a href="/pages/basket.html">
-              <div id="basket" class="basket">
-                <!-- <div class="circle">1</div>
-                <img src="/images/Basket.svg" alt="Basket" /> -->
-              </div>
-            </a>
+  <body class="body">
+    <header>
+      <div class="header">
+        <a href="index.html">
+          <span class="header__qpick">QPICK</span>
+        </a>
+        <div class="header__basket-heart">
+          <div class="header__heart">
+            <div class="header__circle">2</div>
+            <img src="images/Heart.svg" alt="Heart" />
           </div>
-        </div>
-        <!-- </nav> -->
-      </header>
-      <main>
-        <div class="main container collumn">
-          <!-- <div> -->
-          <section>
-            <p class="type-headphone">Наушники</p>
-            <div class="container headphones">
-              <div class="container card collumn">
-                <img class="image-1" src="/images/Apple_BYZ_S852I.png" alt="Apple BYZ S852I" />
-                <div class="container info">
-                  <div class="container rating">
-                    <img src="/images/Star.svg" alt="Star" />
-                    <p>4.7</p>
-                  </div>
-                  <p class="product-name">Apple BYZ S852I</p>
-                  <button
-                    class="card_button buy"
-                    type="button"     
-                    title="buy"              
-                    onclick="basket.handleAddSessionStorage('el1');"
-                  >
-                    Купить
-                  </button>
-                  <p class="price">2927 ₽</p>
-                  <p class="old-price">3527 ₽</p>
-                </div>
-              </div>
-              <div class="container card collumn">
-                <img class="image-2" src="/images/Apple_EarPods-1.png" alt="Apple EarPods" />
-                <div class="container info">
-                  <div class="container rating">
-                    <img src="/images/Star.svg" alt="Star" />
-                    <p>4.5</p>
-                  </div>
-                  <p class="product-name">Apple EarPods</p>
-                  <button
-                    class="card_button buy"
-                    type="button" 
-                    title="buy"
-                    onclick="basket.handleAddSessionStorage('el2');"
-                  >
-                    Купить
-                  </button>
-                  <p class="price">2327 ₽</p>
-                </div>
-              </div>
-              <div class="container card collumn">
-                <img class="image-3" src="/images/Apple_EarPods-2.png" alt="Apple EarPods" />
-                <div class="container info">
-                  <div class="container rating">
-                    <img src="/images/Star.svg" alt="Star" />
-                    <p>4.5</p>
-                  </div>
-                  <p class="product-name">Apple EarPods</p>
-                  <button
-                    class="card_button buy"
-                    type="button" 
-                    title="buy"
-                    onclick="basket.handleAddSessionStorage('el3');"
-                  >
-                    Купить
-                  </button>
-                  <p class="price">2327 ₽</p>
-                </div>
-              </div>
-              <div class="container card collumn">
-                <img class="image-1" src="/images/Apple_BYZ_S852I.png" alt="Apple BYZ S852I" />
-                <div class="container info">
-                  <div class="container rating">
-                    <img src="/images/Star.svg" alt="Star" />
-                    <p>4.7</p>
-                  </div>
-                  <p class="product-name">Apple BYZ S852I</p>
-                  <button
-                    class="card_button buy"
-                    type="button" 
-                    title="buy"
-                    onclick="basket.handleAddSessionStorage('el1');"
-                  >
-                    Купить
-                  </button>
-                  <p class="price">2927 ₽</p>
-                </div>
-              </div>
-              <div class="container card collumn">
-                <img class="image-2" src="/images/Apple_EarPods-1.png" alt="Apple EarPods" />
-                <div class="container info">
-                  <div class="container rating">
-                    <img src="/images/Star.svg" alt="Star" />
-                    <p>4.5</p>
-                  </div>
-                  <p class="product-name">Apple EarPods</p>
-                  <button
-                    class="card_button buy"
-                    type="button" 
-                    title="buy"
-                    onclick="basket.handleAddSessionStorage('el2');"
-                  >
-                    Купить
-                  </button>
-                  <p class="price">2327 ₽</p>
-                </div>
-              </div>
-              <div class="container card collumn">
-                <img class="image-3" src="/images/Apple_EarPods-2.png" alt="Apple EarPods" />
-                <div class="container info">
-                  <div class="container rating">
-                    <img src="/images/Star.svg" alt="Star" />
-                    <p>4.5</p>
-                  </div>
-                  <p class="product-name">Apple EarPods</p>
-                  <button
-                    class="card_button buy"
-                    type="button" 
-                    title="buy"
-                    onclick="basket.handleAddSessionStorage('el3');"
-                  >
-                    Купить
-                  </button>
-                  <p class="price">2327 ₽</p>
-                </div>
-              </div>
-
-              <!-- <div class="container card"></div>
-                <div class="container card"></div>
-                <div class="container card"></div>
-                <div class="container card"></div>
-                <div class="container card"></div> -->
+          <a href="pages/basket.html">
+            <div id="basket" class="header__basket">
+              <div id="countProducts" class="header__circle"></div>
+              <img src="images/Basket.svg" alt="Basket" />
             </div>
-          </section>
-          <section>
-            <p class="type-headphone">Беспроводные наушники</p>
-            <div class="container wireless_headphones">
-              <div class="container card collumn">
-                <img class="image-4" src="/images/Apple_AirPods.png" alt="Apple AirPods" />
-                <div class="container info">
-                  <div class="container rating">
-                    <img src="/images/Star.svg" alt="Star" />
+          </a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="main">
+        <section>
+          <p class="main__type-headphone">Наушники</p>
+          <div class="products-container">
+            <div class="products-element">
+              <img
+                class="products-element__img"
+                src="images/Apple_BYZ_S852I.png"
+                alt="Apple BYZ S852I"
+              />
+              <div class="products-element__card">
+                <div class="card__name-rating">
+                  <span class="card__name">Apple BYZ S852I</span>
+                  <div class="card__rating">
+                    <img src="images/Star.svg" alt="Star" />
                     <p>4.7</p>
                   </div>
-                  <p class="product-name">Apple AirPods</p>
+                </div>
+                <div class="card__prices-btn">
+                  <div class="card__prices">
+                    <span class="card__price">2927 ₽</span>
+                    <span class="card__old-price">3527 ₽</span>
+                  </div>
                   <button
-                    class="card_button buy"
-                    type="button" 
+                    class="card_btn"
+                    type="button"
+                    title="buy"
+                    onclick="basket.handleAddSessionStorage('el1');"
+                  >
+                    Купить
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="products-element">
+              <img
+                class="products-element__img"
+                src="images/Apple_EarPods-1.png"
+                alt="Apple EarPods"
+              />
+              <div class="products-element__card">
+                <div class="card__name-rating">
+                  <span class="card__name">Apple EarPods</span>
+                  <div class="card__rating">
+                    <img src="images/Star.svg" alt="Star" />
+                    <p>4.5</p>
+                  </div>
+                </div>
+                <div class="card__prices-btn">
+                  <div class="card__prices">
+                    <span class="card__price">2327 ₽</span>
+                  </div>
+                  <button
+                    class="card_btn"
+                    type="button"
+                    title="buy"
+                    onclick="basket.handleAddSessionStorage('el2');"
+                  >
+                    Купить
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="products-element">
+              <img
+                class="products-element__img"
+                src="images/Apple_EarPods-2.png"
+                alt="Apple EarPods"
+              />
+              <div class="products-element__card">
+                <div class="card__name-rating">
+                  <span class="card__name">Apple EarPods</span>
+                  <div class="card__rating">
+                    <img src="images/Star.svg" alt="Star" />
+                    <p>4.5</p>
+                  </div>
+                </div>
+                <div class="card__prices-btn">
+                  <div class="card__prices">
+                    <span class="card__price">2327 ₽</span>
+                  </div>
+                  <button
+                    class="card_btn"
+                    type="button"
+                    title="buy"
+                    onclick="basket.handleAddSessionStorage('el3');"
+                  >
+                    Купить
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="products-element">
+              <img
+                class="products-element__img"
+                src="images/Apple_BYZ_S852I.png"
+                alt="Apple BYZ S852I"
+              />
+              <div class="products-element__card">
+                <div class="card__name-rating">
+                  <span class="card__name">Apple BYZ S852I</span>
+                  <div class="card__rating">
+                    <img src="images/Star.svg" alt="Star" />
+                    <p>4.7</p>
+                  </div>
+                </div>
+                <div class="card__prices-btn">
+                  <div class="card__prices">
+                    <span class="card__price">2927 ₽</span>
+                  </div>
+                  <button
+                    class="card_btn"
+                    type="button"
+                    title="buy"
+                    onclick="basket.handleAddSessionStorage('el1');"
+                  >
+                    Купить
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="products-element">
+              <img
+                class="products-element__img"
+                src="images/Apple_EarPods-1.png"
+                alt="Apple EarPods"
+              />
+              <div class="products-element__card">
+                <div class="card__name-rating">
+                  <span class="card__name">Apple EarPods</span>
+                  <div class="card__rating">
+                    <img src="images/Star.svg" alt="Star" />
+                    <p>4.5</p>
+                  </div>
+                </div>
+                <div class="card__prices-btn">
+                  <div class="card__prices">
+                    <span class="card__price">2327 ₽</span>
+                  </div>
+                  <button
+                    class="card_btn"
+                    type="button"
+                    title="buy"
+                    onclick="basket.handleAddSessionStorage('el2');"
+                  >
+                    Купить
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="products-element">
+              <img
+                class="products-element__img"
+                src="images/Apple_EarPods-2.png"
+                alt="Apple EarPods"
+              />
+              <div class="products-element__card">
+                <div class="card__name-rating">
+                  <span class="card__name">Apple EarPods</span>
+                  <div class="card__rating">
+                    <img src="images/Star.svg" alt="Star" />
+                    <p>4.5</p>
+                  </div>
+                </div>
+                <div class="card__prices-btn">
+                  <div class="card__prices">
+                    <span class="card__price">2327 ₽</span>
+                  </div>
+                  <button
+                    class="card_btn"
+                    type="button"
+                    title="buy"
+                    onclick="basket.handleAddSessionStorage('el3');"
+                  >
+                    Купить
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <p class="main__type-headphone">Беспроводные наушники</p>
+          <div class="products-container">
+            <div class="products-element">
+              <img
+                class="products-element__img"
+                src="images/Apple_AirPods.png"
+                alt="Apple AirPods"
+              />
+              <div class="products-element__card">
+                <div class="card__name-rating">
+                  <span class="card__name">Apple AirPods</span>
+                  <div class="card__rating">
+                    <img src="images/Star.svg" alt="Star" />
+                    <p>4.7</p>
+                  </div>
+                </div>
+                <div class="card__prices-btn">
+                  <div class="card__prices">
+                    <span class="card__price">9527 ₽</span>
+                  </div>
+                  <button
+                    class="card_btn"
+                    type="button"
                     title="buy"
                     onclick="basket.handleAddSessionStorage('el4');"
                   >
                     Купить
                   </button>
-                  <p class="price">9527 ₽</p>
                 </div>
               </div>
-              <div class="container card collumn">
-                <img class="image-5" src="/images/GERLAX_GH-04.png" alt="GERLAX GH-04" />
-                <div class="container info">
-                  <div class="container rating">
-                    <img src="/images/Star.svg" alt="Star" />
+            </div>
+            <div class="products-element">
+              <img class="products-element__img" src="images/GERLAX_GH-04.png" alt="GERLAX GH-04" />
+              <div class="products-element__card">
+                <div class="card__name-rating">
+                  <span class="card__name">GERLAX GH-04</span>
+                  <div class="card__rating">
+                    <img src="images/Star.svg" alt="Star" />
                     <p>4.7</p>
                   </div>
-                  <p class="product-name">GERLAX GH-04</p>
+                </div>
+                <div class="card__prices-btn">
+                  <div class="card__prices">
+                    <span class="card__price">6527 ₽</span>
+                  </div>
                   <button
-                    class="card_button buy"
+                    class="card_btn"
                     type="button"
-                    title="buy" 
+                    title="buy"
                     onclick="basket.handleAddSessionStorage('el5');"
                   >
                     Купить
                   </button>
-                  <p class="price">6527 ₽</p>
                 </div>
               </div>
-              <div class="container card collumn">
-                <img class="image-6" src="/images/BOROFON_BO4.png" alt="BOROFONE BO4" />
-                <div class="container info">
-                  <div class="container rating">
-                    <img src="/images/Star.svg" alt="Star" />
+            </div>
+            <div class="products-element">
+              <img class="products-element__img" src="images/BOROFON_BO4.png" alt="BOROFONE BO4" />
+              <div class="products-element__card">
+                <div class="card__name-rating">
+                  <span class="card__name">BOROFONE BO4</span>
+                  <div class="card__rating">
+                    <img src="images/Star.svg" alt="Star" />
                     <p>4.7</p>
                   </div>
-                  <p class="product-name">BOROFONE BO4</p>
+                </div>
+                <div class="card__prices-btn">
+                  <div class="card__prices">
+                    <span class="card__price">7527 ₽</span>
+                  </div>
                   <button
-                    class="card_button buy"
-                    type="button" 
+                    class="card_btn"
+                    type="button"
                     title="buy"
                     onclick="basket.handleAddSessionStorage('el6');"
                   >
                     Купить
                   </button>
-                  <p class="price">7527 ₽</p>
                 </div>
               </div>
             </div>
-          </section>
-          <!-- </div> -->
-        </div>
-      </main>
-      <footer>
-        <div class="footer container space-between">
-          <span class="qpick">QPICK</span>
-          <div class="container links space-between">
-            <div class="container collumn space-between">
-              <span>Избранное</span>
-              <span>Корзина</span>
-              <span>Контакты</span>
-            </div>
-            <div class="container collumn space-between">
-              <span>Условия сервиса</span>
-              <div class="container language space-between">
-                <img src="/images/RU.svg" alt="ru" />
-                <span class="rus">Рус</span>
-                <span class="eng">Eng</span>
-              </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="footer">
+        <span class="footer__qpick">QPICK</span>
+        <div class="footer__links">
+          <div class="footer__links-container">
+            <span>Избранное</span>
+            <span>Корзина</span>
+            <span>Контакты</span>
+          </div>
+          <div class="footer__links-container">
+            <span>Условия сервиса</span>
+            <div class="links-container__language">
+              <img src="images/RU.svg" alt="ru" />
+              <span class="language__rus">Рус</span>
+              <span class="language__eng">Eng</span>
             </div>
           </div>
-          <div class="container socials space-between">
-            <img src="/images/VK.svg" alt="VK" />
-            <img src="/images/Telegram.svg" alt="Telegram" />
-            <img src="/images/Whatsapp.svg" alt="Whatsapp" />
-          </div>
         </div>
-      </footer>
-    </div>
-    <script src="/utils/sessionStorageUtil.js"></script>
-    <script src="/basket.js"></script>
-    <!-- <script src="/products.js"></script> -->
+        <div class="footer__links__socials">
+          <img src="images/VK.svg" alt="VK" />
+          <img src="images/Telegram.svg" alt="Telegram" />
+          <img src="images/Whatsapp.svg" alt="Whatsapp" />
+        </div>
+      </div>
+    </footer>
+    <script src="utils/sessionStorageUtil.js"></script>
+    <script src="components/header/basket.js"></script>
   </body>
 </html>

@@ -1,317 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../components/header/header.css" />
+    <link rel="stylesheet" href="basket.css" />
+    <link rel="stylesheet" href="../components/footer/footer.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body>
-    <div class="main-container container collumn">
-      <header>
-        <!-- <nav> -->
-        <div class="header container space-between">
-          <a href="/index.html">
-            <span class="qpick">QPICK</span>
+  <body class="body">
+    <header>
+      <div class="header">
+        <a href="../index.html">
+          <span class="header__qpick">QPICK</span>
+        </a>
+        <div class="header__basket-heart">
+          <div class="header__heart">
+            <div class="header__circle">2</div>
+            <img src="../images/Heart.svg" alt="Heart" />
+          </div>
+          <a href="basket.html">
+            <div id="basket" class="header__basket">
+              <div id="countProducts" class="header__circle"></div>
+              <img src="../images/Basket.svg" alt="Basket" />
+            </div>
           </a>
-          <div class="container basket-heart space-between">
-            <div class="heart">
-              <div class="circle">2</div>
-              <img src="/images/Heart.svg" alt="Heart" />
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="main">
+        <section>
+          <span class="main__basket">Корзина</span>
+          <div id="products" class="main__products"></div>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="footer">
+        <span class="footer__qpick">QPICK</span>
+        <div class="footer__links">
+          <div class="footer__links-container">
+            <span>Избранное</span>
+            <span>Корзина</span>
+            <span>Контакты</span>
+          </div>
+          <div class="footer__links-container">
+            <span>Условия сервиса</span>
+            <div class="links-container__language">
+              <img src="../images/RU.svg" alt="ru" />
+              <span class="language__rus">Рус</span>
+              <span class="language__eng">Eng</span>
             </div>
-            <a href="/pages/basket.html">
-              <div id="basket" class="basket">
-                <!-- <div class="circle">1</div>
-                  <img src="/images/Basket.svg" alt="Basket" /> -->
-              </div>
-            </a>
           </div>
         </div>
-        <!-- </nav> -->
-      </header>
-      <main>
-        <div class="container collumn main">
-          <section>
-            <p class="p__basket">Корзина</p>
-            <div id="products" class="container main__basket space-between">
-              <div class="container collumn main__basket-items">
-                <div class="container basket__item">
-                  <button 
-                    class="basket__delete"
-                    onclick="productsPage.handleAllRemoveSessionStorage('el1');"
-                  >
-                    <img src="/images/Delete.svg" alt="" />
-                  </button>                 
-                  <img
-                    class="basket__image-1"
-                    src="/images/Apple_BYZ_S852I.png"
-                    alt="Apple BYZ S852I"
-                  />
-                  <div class="counter container space-between">
-                    <button class="counter_button container" data-direction="minus">
-                      <div class="minus"></div>
-                    </button>
-                    <input
-                      class="counter__value"
-                      type="text"
-                      name="productCount"
-                      value="1"
-                      disabled
-                    />
-                    <button 
-                      class="counter_button container" 
-                      data-direction="plus" 
-                      
-                    >
-                    <!-- onclick="productsPage.handleAddSessionStorage('el6');" -->
-                      <div class="plus1"></div>
-                      <div class="plus2"></div>
-                    </button>
-                  </div>
-                  <p class="item__name">Apple BYZ S852I</p>
-                  <p class="item__price">2 927 ₽</p>
-                  <p class="item__price__all">2 927 ₽</p>
-                </div>
-              <!-- <div class="container collumn main__basket-items">
-                <div class="container basket__item">
-                  <img class="baslet__delete" src="/images/Delete.svg" alt="" />
-                  <img
-                    class="basket__image-1"
-                    src="/images/Apple_BYZ_S852I.png"
-                    alt="Apple BYZ S852I"
-                  />
-                  <div class="counter container space-between">
-                    <button class="counter_button container" data-direction="minus">
-                      <div class="minus"></div>
-                    </button>
-                    <input
-                      class="counter__value"
-                      type="text"
-                      name="productCount"
-                      value="1"
-                      disabled
-                    />
-                    <button class="counter_button container" data-direction="plus">
-                      <div class="plus1"></div>
-                      <div class="plus2"></div>
-                    </button>
-                  </div>
-                  <p class="item__name">Apple BYZ S852I</p>
-                  <p class="item__price">2 927 ₽</p>
-                  <p class="item__price__all">2 927 ₽</p>
-                </div>
-                <div class="container basket__item">
-                  <img class="baslet__delete" src="/images/Delete.svg" alt="" />
-                  <img
-                    class="basket__image-1"
-                    src="/images/Apple_AirPods.png"
-                    alt="Apple BYZ S852I"
-                  />
-                  <div class="counter container space-between">
-                    <button class="counter_button container" data-direction="minus">
-                      <div class="minus"></div>
-                    </button>
-                    <input
-                      class="counter__value"
-                      type="text"
-                      name="productCount"
-                      value="1"
-                      disabled
-                    />
-                    <button class="counter_button container" data-direction="plus">
-                      <div class="plus1"></div>
-                      <div class="plus2"></div>
-                    </button>
-                  </div>
-                  <p class="item__name">Apple BYZ S852I</p>
-                  <p class="item__price">2 927 ₽</p>
-                  <p class="item__price__all">2 927 ₽</p>
-                </div>
-                <div class="container basket__item">
-                  <img class="baslet__delete" src="/images/Delete.svg" alt="" />
-                  <img
-                    class="basket__image-1"
-                    src="/images/Apple_EarPods-1.png"
-                    alt="Apple BYZ S852I"
-                  />
-                  <div class="counter container space-between">
-                    <button class="counter_button container" data-direction="minus">
-                      <div class="minus"></div>
-                    </button>
-                    <input
-                      class="counter__value"
-                      type="text"
-                      name="productCount"
-                      value="1"
-                      disabled
-                    />
-                    <button class="counter_button container" data-direction="plus">
-                      <div class="plus1"></div>
-                      <div class="plus2"></div>
-                    </button>
-                  </div>
-                  <p class="item__name">Apple BYZ S852I</p>
-                  <p class="item__price">2 927 ₽</p>
-                  <p class="item__price__all">2 927 ₽</p>
-                </div>
-                <div class="container basket__item">
-                  <img class="baslet__delete" src="/images/Delete.svg" alt="" />
-                  <img
-                    class="basket__image-1"
-                    src="/images/Apple_EarPods-2.png"
-                    alt="Apple BYZ S852I"
-                  />
-                  <div class="counter container space-between">
-                    <button class="counter_button container" data-direction="minus">
-                      <div class="minus"></div>
-                    </button>
-                    <input
-                      class="counter__value"
-                      type="text"
-                      name="productCount"
-                      value="1"
-                      disabled
-                    />
-                    <button class="counter_button container" data-direction="plus">
-                      <div class="plus1"></div>
-                      <div class="plus2"></div>
-                    </button>
-                  </div>
-                  <p class="item__name">Apple BYZ S852I</p>
-                  <p class="item__price">2 927 ₽</p>
-                  <p class="item__price__all">2 927 ₽</p>
-                </div>
-                <div class="container basket__item">
-                  <img class="baslet__delete" src="/images/Delete.svg" alt="" />
-                  <img
-                    class="basket__image-1"
-                    src="/images/GERLAX_GH-04.png"
-                    alt="Apple BYZ S852I"
-                  />
-                  <div class="counter container space-between">
-                    <button class="counter_button container" data-direction="minus">
-                      <div class="minus"></div>
-                    </button>
-                    <input
-                      class="counter__value"
-                      type="text"
-                      name="productCount"
-                      value="1"
-                      disabled
-                    />
-                    <button class="counter_button container" data-direction="plus">
-                      <div class="plus1"></div>
-                      <div class="plus2"></div>
-                    </button>
-                  </div>
-                  <p class="item__name">Apple BYZ S852I</p>
-                  <p class="item__price">2 927 ₽</p>
-                  <p class="item__price__all">2 927 ₽</p>
-                </div>
-                <div class="container basket__item">
-                  <img class="baslet__delete" src="/images/Delete.svg" alt="" />
-                  <img
-                    class="basket__image-1"
-                    src="/images/BOROFON_BO4.png"
-                    alt="Apple BYZ S852I"
-                  />
-                  <div class="counter container space-between">
-                    <button class="counter_button container" data-direction="minus">
-                      <div class="minus"></div>
-                    </button>
-                    <input
-                      class="counter__value"
-                      type="text"
-                      name="productCount"
-                      value="1"
-                      disabled
-                    />
-                    <button class="counter_button container" data-direction="plus">
-                      <div class="plus1"></div>
-                      <div class="plus2"></div>
-                    </button>
-                  </div>
-                  <p class="item__name">Apple BYZ S852I</p>
-                  <p class="item__price">2 927 ₽</p>
-                  <p class="item__price__all">2 927 ₽</p>
-                </div>
-                <div class="container basket__item">
-                  <img class="baslet__delete" src="/images/Delete.svg" alt="" />
-                  <img
-                    class="basket__image-1"
-                    src="/images/Apple_BYZ_S852I.png"
-                    alt="Apple BYZ S852I"
-                  />
-                  <div class="counter container space-between">
-                    <button class="counter_button container" data-direction="minus">
-                      <div class="minus"></div>
-                    </button>
-                    <input
-                      class="counter__value"
-                      type="text"
-                      name="productCount"
-                      value="1"
-                      disabled
-                    />
-                    <button class="counter_button container" data-direction="plus">
-                      <div class="plus1"></div>
-                      <div class="plus2"></div>
-                    </button>
-                  </div>
-                  <p class="item__name">Apple BYZ S852I</p>
-                  <p class="item__price">2 927 ₽</p>
-                  <p class="item__price__all">2 927 ₽</p>
-                </div>
-                <div class="container basket__item"></div>
-              </div>
-              <div class="container collumn main__total-price space-between">
-                <div class="container total space-between">
-                  <p>ИТОГО</p>
-                  <p>2 927 ₽</p>
-                </div>
-                <a href="#">
-                  <div class="total_button container">
-                    <p>Перейти к оформлению</p>
-                  </div>
-                </a>
-              </div> -->
-            </div>
-          </section>
+        <div class="footer__links__socials">
+          <img src="../images/VK.svg" alt="VK" />
+          <img src="../images/Telegram.svg" alt="Telegram" />
+          <img src="../images/Whatsapp.svg" alt="Whatsapp" />
         </div>
-      </main>
-      <footer>
-        <div class="footer container space-between">
-          <span class="qpick">QPICK</span>
-          <div class="container links space-between">
-            <div class="container collumn space-between">
-              <span>Избранное</span>
-              <span>Корзина</span>
-              <span>Контакты</span>
-            </div>
-            <div class="container collumn space-between">
-              <span>Условия сервиса</span>
-              <div class="container language space-between">
-                <img src="/images/RU.svg" alt="ru" />
-                <span class="rus">Рус</span>
-                <span class="eng">Eng</span>
-              </div>
-            </div>
-          </div>
-          <div class="container socials space-between">
-            <img src="/images/VK.svg" alt="VK" />
-            <img src="/images/Telegram.svg" alt="Telegram" />
-            <img src="/images/Whatsapp.svg" alt="Whatsapp" />
-          </div>
-        </div>
-      </footer>
-    </div>
-    <script src="/constains/catalog.js"></script>
-    <script src="/utils/sessionStorageUtil.js"></script>
-    <script src="/basket.js"></script>
-    <script src="/products.js"></script>
-    <script src="/countButtons.js"></script>
-    
-    
+      </div>
+    </footer>
+    <script src="../constains/catalog.js"></script>
+    <script src="../utils/sessionStorageUtil.js"></script>
+    <script src="../components/header/basket.js"></script>
+    <script src="products.js"></script>
+    <script src="countButtons.js"></script>
   </body>
 </html>
